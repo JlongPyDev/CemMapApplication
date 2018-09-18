@@ -24,6 +24,7 @@ using Esri.ArcGISRuntime.Symbology;
 using Esri.ArcGISRuntime.LocalServices;
 using Esri.ArcGISRuntime.Portal;
 using Esri.ArcGISRuntime.UI;
+using Esri.ArcGISRuntime.UI.Controls;
 using System.Drawing;
 using Esri.ArcGISRuntime.Tasks;
 
@@ -94,6 +95,7 @@ namespace CemMapApp
             catch { this.Close(); }
         }
 
+
         private void btnSearch_Click(object sender, EventArgs e)
         {//populate the grid based on lot
 
@@ -117,22 +119,18 @@ namespace CemMapApp
 
         }
 
-              
-        private async void Initialize()
+
+               
+        private void Initialize()
         {
             //Map myMap = new Map(Basemap.CreateTerrainWithLabels());
-            
-            
-            
-
-            string name = "Legend";
-
+            Map myMap = new Map(BasemapType.ImageryWithLabelsVector, 35.728990, -78.856027, 18);
 
             //LegendInfo MapLegend = new LegendInfo {Name, Symbol };
 
             // TEST GDB SERVICE VS MAP SERVICE
             // http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMTESTSERV/GeoDataServer/versions/dbo.DEFAULT
-            // WFS serv http://apexgis:6080/arcgis/services/CemeteryHost/CEMTESTSERV/GeoDataServer/WFSServer
+            // WFS serv http://apexgis:6080/arcgis/services/C+emeteryHost/CEMTESTSERV/GeoDataServer/WFSServer
 
 
             // LEGEND ILayerContent
@@ -140,7 +138,6 @@ namespace CemMapApp
             //var CemLot = new Uri("http://apexgis.ci.apex.nc.us:6080/arcgis/services/CemeteryHost/CemAppData/GeoDataServer");
             var CemLot = new Uri("http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMTESTSERV/FeatureServer/0");
             FeatureLayer LotLayer = new FeatureLayer(CemLot);
-
 
 
             SimpleLineSymbol LotLineSymb = new SimpleLineSymbol(
@@ -273,22 +270,15 @@ namespace CemMapApp
             };
 
             SimpleRenderer renderer = new SimpleRenderer(symbol);
-
+           
             // Main GIS Operation Calls 
-
-
-            await PlotLayer.LoadAsync();
-            await PlotLayer2.LoadAsync();
-            await BoundLayer.LoadAsync();
-            await LotLayer.LoadAsync();
-
+                   
             BoundLayer.Renderer = renderer;          
             PlotLayer.Renderer = plotRenderer;
             LotLayer.Renderer = LotRenderer;
             PlotLayer2.Renderer = plotRenderer2;
 
-            Map myMap = new Map(BasemapType.ImageryWithLabelsVector, 35.728990, -78.856027, 18);
-
+                    
             myMap.OperationalLayers.Add(BoundLayer);           
             myMap.OperationalLayers.Add(PlotLayer);
             myMap.OperationalLayers.Add(PlotLayer2);

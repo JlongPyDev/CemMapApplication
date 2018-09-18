@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:CemMapApp"
         xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013" 
         x:Class="CemMapApp.MainWindow"
-        xmlns:toolkit="clr-namespace:Esri.ArcGISRuntime.Toolkit.Controls;assembly=Esri.ArcGISRuntime.Toolkit"
+        
         mc:Ignorable="d"
         Title="CemMapApp" Height="800" Width="1200">
 
-       
-    <Grid x:Name="MainGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+    <Grid x:Name="MainGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RenderTransformOrigin="0.428,0.519">
 
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\Jlong\Pictures\Backgrounds\abstract-blue-wave-background.jpg"/>
@@ -41,13 +41,18 @@
             <PasswordBox x:Name="Pw_Box" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Width="265" Grid.Column="1" Height="23" PasswordChar="*"/>
         </Grid>
 
-        <esri:MapView x:Name="MyMapView" Margin="62,265,546,58">
+        <esri:MapView x:Name="MyMapView" Margin="62,265,546,58" RenderTransformOrigin="0.265,0.553">
+            <esri:MapView.InteractionOptions>
+                <esri:MapViewInteractionOptions IsEnabled="True"/>
+            </esri:MapView.InteractionOptions>
+
             <esri:Map x:Name="MyMap">
 
             </esri:Map>
-                       
+            
         </esri:MapView>
 
+       
         <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="699,22,75,48" x:Name="SearchGrid" Background="#FF57B9B0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="107*"/>
