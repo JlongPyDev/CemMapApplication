@@ -5,101 +5,111 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CemMapApp"
         xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013" 
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
         x:Class="CemMapApp.MainWindow"
         
         mc:Ignorable="d"
-        Title="CemMapApp" Height="800" Width="1200">
+        Title="CemMapApp" Height="800" Width="1200"
+        
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
 
 
-    <Grid x:Name="MainGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RenderTransformOrigin="0.428,0.519">
+    <Grid x:Name="MainGrid" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#91EEC5" >
 
-        <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Jlong\Pictures\Backgrounds\abstract-blue-wave-background.jpg"/>
 
-        </Grid.Background>
 
-        <Grid x:Name="LoginGrid" Canvas.Left="44" Canvas.Top="32" Width="626" Margin="40,22,526,638" Background="#FF97DCC3">
+        <Grid x:Name="LoginGrid" Canvas.Left="44" Canvas.Top="32" Margin="40,19,513,0" Background="#FF57B9B0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="100">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="107*"/>
                 <ColumnDefinition Width="102*"/>
             </Grid.ColumnDefinitions>
-            <Border x:Name="LoginBrdr" BorderThickness="4" HorizontalAlignment="Stretch" Height="109" VerticalAlignment="Top" Width="Auto" Grid.ColumnSpan="2" CornerRadius="3">
-                <Border.BorderBrush>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FF33C79F" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.BorderBrush>
+            <Border x:Name="LoginBrdr" BorderThickness="4" HorizontalAlignment="Stretch" Height="104" Width="Auto" VerticalAlignment="Top"  CornerRadius="3" Grid.ColumnSpan="2" BorderBrush="#006f6f" Margin="0,0,0,-3"  >
+
             </Border>
-            <Label x:Name="Id_Label" Content="ID:" Margin="9,9,591,0" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.667,-0.154" Height="51" Grid.Column="1"/>
+            <Label x:Name="Id_Label" Content="ID:" Margin="194,9,134,0" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.667,-0.154" Height="51"/>
             <TextBox x:Name="Id_TextEntry" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="218" Margin="48,18,0,0"/>
-            <Button x:Name="Logon_btn" Content="Logon" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="109" Height="34" Margin="48,60,0,0" Click="Button_Click" />
-            <Button x:Name="Logoff_btn" Content="Logoff" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="101" Height="34"  Grid.Column="1" Margin="140,60,0,0" Click="LogOffClose_Click"/>
-            <Label x:Name="Pw_Label" Content="Password:" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="67" Margin="271,15,0,0" Grid.ColumnSpan="2"/>
-            <Label x:Name="IdLabel" Content="ID:" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.026,-4.731"/>
+            <Button x:Name="Logon_btn" Content="Logon" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Height="25" Margin="48,60,0,0" Click="Button_Click" />
+            <Button x:Name="Logoff_btn" Content="Logoff" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Height="25"  Grid.Column="1" Margin="187,60,0,0" Click="LogOffClose_Click" IsEnabled="False"/>
+            <Label x:Name="Pw_Label" Content="Password:" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="62" Margin="281,18,0,0" Grid.ColumnSpan="2" Height="23"/>
+            <Label x:Name="IdLabel" Content="ID:" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.026,-4.731" Width="28"/>
             <PasswordBox x:Name="Pw_Box" HorizontalAlignment="Left" Margin="23,18,0,0" VerticalAlignment="Top" Width="265" Grid.Column="1" Height="23" PasswordChar="*"/>
         </Grid>
 
-        <esri:MapView x:Name="MyMapView" Margin="62,265,546,58" RenderTransformOrigin="0.265,0.553">
-            <esri:MapView.InteractionOptions>
-                <esri:MapViewInteractionOptions IsEnabled="True"/>
-            </esri:MapView.InteractionOptions>
-
-            <esri:Map x:Name="MyMap">
-
-            </esri:Map>
-            
-        </esri:MapView>
-
-       
-        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="699,22,75,48" x:Name="SearchGrid" Background="#FF57B9B0">
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="709,23,65,0" x:Name="SearchGrid" Background="#FF57B9B0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="107*"/>
-                <ColumnDefinition Width="17*"/>
-                <ColumnDefinition Width="85*"/>
+                <ColumnDefinition Width="215*"/>
+                <ColumnDefinition Width="52*"/>
+                <ColumnDefinition Width="152*"/>
             </Grid.ColumnDefinitions>
-            <Border x:Name="SearchBorder" BorderThickness="4" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="Auto" RenderTransformOrigin="0.33,0.09" Height="689" Grid.ColumnSpan="3" CornerRadius="3">
-                <Border.BorderBrush>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="#FF33C79F" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.BorderBrush>
+
+            <Border BorderBrush="#006f6f" x:Name="SearchBorder" BorderThickness="4" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="Auto" RenderTransformOrigin="0.33,0.09" Height="692" Grid.ColumnSpan="3" CornerRadius="3" Margin="-4,-4,-3,0">
+
+                <Button x:Name="btnClose" Content="Close" HorizontalAlignment="Left" Height="25" Margin="301,639,0,0" VerticalAlignment="Top" Width="100" Click="btnClose_Click"/>
+
             </Border>
-            <TextBox x:Name="CostBox" HorizontalAlignment="Stretch" Height="20"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="73,181,21,0"/>
-            <TextBox x:Name="FirstName" HorizontalAlignment="Stretch" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="7,68,43,0" Grid.Column="2"/>
-            <TextBox x:Name="PlotStatus" HorizontalAlignment="Stretch" Height="20"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="73,144,21,0"/>
-            <TextBox x:Name="TransferBox" HorizontalAlignment="Stretch" Height="20"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="7,181,43,0" Grid.Column="2"/>
-            <TextBox x:Name="LastNameBox" HorizontalAlignment="Stretch" Height="20"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="73,71,21,0"/>
-            <TextBox x:Name="Plot" HorizontalAlignment="Stretch" Height="20"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="7,36,43,0" Grid.Column="2"/>
-            <TextBox x:Name="LastName2Box" HorizontalAlignment="Stretch" Height="23"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="73,105,21,0"/>
-            <TextBox x:Name="FirstName2" HorizontalAlignment="Stretch" Height="20"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="7,108,43,0" Grid.Column="2"/>
-            <TextBox x:Name="PurchaseBox" HorizontalAlignment="Stretch" Height="20"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="73" Margin="52,144,45,0" Grid.Column="2"/>
-            <TextBox x:Name="LotBox" HorizontalAlignment="Stretch" Height="20"  TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="73,36,21,0" RenderTransformOrigin="0.183,0.75"/>
-            <CheckBox x:Name="Burial_Record_Exist" Content="Burial Record Exists" FlowDirection="RightToLeft" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="1,249,43,0" Grid.Column="2"/>
-            <CheckBox x:Name="VeteranStatus" Content="Veteran" HorizontalAlignment="Center" FlowDirection="RightToLeft" VerticalAlignment="Top" RenderTransformOrigin="6.77,7.333" Grid.Column="2" Margin="44,220,45,0" Cursor="Arrow" Width="81"/>
-            <Button x:Name="SaveBtn" Content="Save" HorizontalAlignment="Left" Margin="73,249,0,0" VerticalAlignment="Top" Width="75" IsDefault="True"/>
-            <TextBox x:Name="NotesBox" TextWrapping="Wrap" Margin="28,299,30,314" Grid.ColumnSpan="3"/>
-            <DataGrid x:Name="SrcGrdList" AutoGenerateColumns="True" HorizontalAlignment="Stretch" Height="274" Margin="28,405,30,0" VerticalAlignment="Top" Width="360" Grid.ColumnSpan="5" ItemsSource="{Binding}">
-
-            </DataGrid>
+            <TextBox x:Name="txtCost" HorizontalAlignment="Stretch" Height="20"  TextWrapping="Wrap"  VerticalAlignment="Top" Margin="80,451,15.2,0"/>
+            <TextBlock x:Name="lblCost" HorizontalAlignment="Left" Height="20" Margin="10,451,0,0" TextWrapping="Wrap" Text="Cost ($)" VerticalAlignment="Top" Width="40"/>
+            <TextBox x:Name="txtFName" HorizontalAlignment="Stretch" Height="20" TextWrapping="Wrap"  VerticalAlignment="Top" Margin="21.8,342,11.2,0" Grid.Column="2" Width="120"/>
+            <TextBlock x:Name="lblFName" HorizontalAlignment="Left" Height="17" Margin="215,342,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Width="63" Grid.ColumnSpan="3"/>
+            <TextBox x:Name="txtTransfer" HorizontalAlignment="Stretch" Height="20"  TextWrapping="Wrap"  VerticalAlignment="Top" Margin="21.8,451,11.2,0" Grid.Column="2" Width="120"/>
+            <TextBox x:Name="txtLName" HorizontalAlignment="Stretch" Height="20"  TextWrapping="Wrap"  VerticalAlignment="Top" Margin="79,342,15.2,0" Width="120"/>
+            <TextBlock x:Name="lblLName" HorizontalAlignment="Left" Height="20" Margin="10,342,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Width="64"/>
+            <TextBox x:Name="txtPlot" HorizontalAlignment="Stretch" Height="20"  TextWrapping="Wrap"  VerticalAlignment="Top" Margin="21.8,306,11.2,0" Grid.Column="2" Width="120"/>
+            <TextBlock x:Name="lblPlot" HorizontalAlignment="Left" Height="17" Margin="215,306,0,0" TextWrapping="Wrap" Text="Plot" VerticalAlignment="Top" Width="71" Grid.ColumnSpan="3"/>
+            <TextBox x:Name="txtLName2" HorizontalAlignment="Stretch" Height="20"  TextWrapping="Wrap"  VerticalAlignment="Top" Margin="79,378,15.2,0" Width="120"/>
+            <TextBlock x:Name="lblLName2" HorizontalAlignment="Left" Height="20" Margin="10,378,0,0" TextWrapping="Wrap" Text="Last Name 2" VerticalAlignment="Top" Width="64"/>
+            <ComboBox x:Name="cmbStatus" HorizontalAlignment="Left" Height="20" Margin="79,416,0,0" VerticalAlignment="Top" Width="120">
+                <ComboBoxItem Content="Deeded"/>
+                <ComboBoxItem Content="Not Saleable"/>
+                <ComboBoxItem Content="Unknown"/>
+            </ComboBox>
+            <TextBox x:Name="txtFName2" HorizontalAlignment="Stretch" Height="20"  TextWrapping="Wrap"  VerticalAlignment="Top" Margin="21.8,378,11.2,0" Grid.Column="2" Width="120"/>
+            <TextBlock x:Name="lblFName2" HorizontalAlignment="Left" Height="20" Margin="215,378,0,0" TextWrapping="Wrap" Text="First Name 2" VerticalAlignment="Top" Width="63" Grid.ColumnSpan="3"/>
+            <TextBox x:Name="txtPurchase" HorizontalAlignment="Stretch" Height="20"  TextWrapping="Wrap"  VerticalAlignment="Top" Margin="68.8,416,11.2,0" Grid.Column="2"/>
+            <TextBlock x:Name="lblDeedDate" Height="20" Margin="215,416,92.2,0" TextWrapping="Wrap" Text="Purchase/Deed Date" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+            <TextBlock x:Name="lblLot" HorizontalAlignment="Left" Height="20" Margin="10,306,0,0" TextWrapping="Wrap" Text="Lot" VerticalAlignment="Top" Width="64"/>
+            <TextBox x:Name="txtLot" HorizontalAlignment="Stretch" Height="20"  TextWrapping="Wrap"  VerticalAlignment="Top" Margin="80,306,15.2,0" RenderTransformOrigin="0.183,0.75"/>
+            <TextBox x:Name="txtOcc" HorizontalAlignment="Left" Height="20" Margin="79,486,0,0" VerticalAlignment="Top" Width="210" Grid.ColumnSpan="3"/>
+            <TextBlock x:Name="lblOcc" HorizontalAlignment="Left" Height="20" Margin="10,486,0,0" TextWrapping="Wrap" Text="Occupant" VerticalAlignment="Top" Width="61"/>
+            <CheckBox x:Name="cbRec" Content="Burial Record Exists" FlowDirection="RightToLeft" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="9.8,518,15.2,0" Height="22" Grid.Column="2"/>
+            <CheckBox x:Name="cbVet" Content="Veteran" HorizontalAlignment="Center" FlowDirection="RightToLeft" VerticalAlignment="Top" RenderTransformOrigin="6.77,7.333" Grid.Column="2" Margin="21.8,486,14.2,0" Cursor="Arrow" Width="116" Height="22"/>
+            <Button x:Name="SaveBtn" Content="Save" HorizontalAlignment="Left" Margin="18,642,0,0" VerticalAlignment="Top" Width="100" IsDefault="True" Height="25" RenderTransformOrigin="0.016,0.564" Click="SaveBtn_Click" IsEnabled="False"/>
+            <TextBox x:Name="txtNotes" TextWrapping="Wrap" Margin="18,555,11.2,61" Grid.ColumnSpan="3"/>
+            <TextBlock x:Name="txtNotes1" HorizontalAlignment="Left" Height="20" Margin="18,530,0,0" TextWrapping="Wrap" Text="Notes" VerticalAlignment="Top" Width="56" RenderTransformOrigin="0.523,0.51"/>
         </Grid>
-        <Grid Margin="40,201,586,536">
-            <Label Content="Last Name Search" HorizontalAlignment="Left"  VerticalAlignment="Top" RenderTransformOrigin="-1.658,0.654" Width="232" Margin="10,-31,0,0"/>
-            <Label Content="Lot Search" HorizontalAlignment="Left"  VerticalAlignment="Top" RenderTransformOrigin="-0.5,0.712" Width="152" Margin="288,-31,0,0"/>
-
-            <TextBox x:Name="LastNameSearch" HorizontalAlignment="Stretch" Height="24" Margin="10,8,323,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
-            <TextBox x:Name="PlotSearch" HorizontalAlignment="Stretch" Height="23" Margin="288,9,126,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152"/>
-            <Button x:Name="SearchBtn" Content="Search" HorizontalAlignment="Stretch" Margin="486,0,-61,0" VerticalAlignment="Top" Width="141" Height="32" Click="btnSearch_Click">
-
-            </Button>
-
+        <Grid Margin="40,184,513,542">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60*"/>
+                <ColumnDefinition Width="161*"/>
+                <ColumnDefinition Width="420"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Last Name Search" HorizontalAlignment="Left"  VerticalAlignment="Top" RenderTransformOrigin="-1.658,0.654" Width="232" Margin="9,-26,0,0" Grid.ColumnSpan="3"/>
+            <Label Content="Lot Search" HorizontalAlignment="Left"  VerticalAlignment="Top" RenderTransformOrigin="-0.5,0.712" Width="135" Margin="68,-26,0,0" Grid.Column="2"/>
+            <TextBox x:Name="PlotSearch" HorizontalAlignment="Stretch" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="PlotSearch_TextChanged" Margin="67,0,252,0" Grid.Column="2"/>
+            <Button x:Name="SearchBtn" Content="Search" HorizontalAlignment="Stretch" Margin="286,0,10,0" VerticalAlignment="Top" Height="23" Click="btnSearch_Click" IsEnabled="False" Grid.Column="2"/>
+            <TextBox x:Name="LastNameSearch" HorizontalAlignment="Stretch" Width="Auto" Height="23" Margin="9,0,400,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="LastNameSearch_TextChanged" Text="" Grid.ColumnSpan="3"/>
         </Grid>
-        <Grid Margin="727,459,105,73"/>
+        <DataGrid AutoGenerateColumns="True" Height="207" ColumnWidth="*" HorizontalAlignment="Left" Margin="734,67,0,0" x:Name="grdList" VerticalAlignment="Top" Width="370" SelectionMode="Single" SelectionUnit="Cell" MouseDoubleClick="grdList_MouseDoubleClick"  >
 
+        </DataGrid>
+        <TextBlock x:Name="blResults" HorizontalAlignment="Left" Height="24" Margin="862,38,0,0" TextWrapping="Wrap" FontFamily="Georgia" Text="Search Results" VerticalAlignment="Top" Width="176" FontSize="18" />
+        <TextBlock x:Name="lblStatus" HorizontalAlignment="Left" Height="20" Margin="718,441,0,0" TextWrapping="Wrap" Text="Plot Status" VerticalAlignment="Top" Width="67"/>
+        <TextBlock x:Name="lblTransfer" HorizontalAlignment="Left" Height="18" Margin="916,476,0,0" TextWrapping="Wrap" Text="Transfer" VerticalAlignment="Top" Width="66"/>
+        <TextBlock x:Name="lblDetails" HorizontalAlignment="Left" Height="19" Margin="847,293,0,0" FontFamily="Georgia" TextWrapping="Wrap" Text="Details" VerticalAlignment="Top" Width="145" TextAlignment="Center" FontSize="14"/>
+        <Border >
+            <Grid>
+                <esri:MapView x:Name="MyMapView" HorizontalAlignment="Stretch" RenderTransformOrigin="0.265,0.553" Margin="38,236,503,99">
+                    <esri:MapView.InteractionOptions>
+                        <esri:MapViewInteractionOptions IsEnabled="True"/>
+                    </esri:MapView.InteractionOptions>
+                    <esri:Map x:Name="MyMap"/>
+                </esri:MapView>
+                <Image x:Name ="legend" HorizontalAlignment="Stretch" VerticalAlignment="Top" Source="C:\Users\Jlong\source\repos\CemMapApp\CemMapApp\legendv3.JPG" Margin="38,646,503,0"/>
+                <Border BorderBrush="#006f6f" BorderThickness="2" HorizontalAlignment="Stretch" Height="477" Margin="38,236,503,0" VerticalAlignment="Top"/>
 
-
+            </Grid>
+        </Border>
 
     </Grid>
 </Window>
