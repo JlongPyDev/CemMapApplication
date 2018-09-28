@@ -99,7 +99,36 @@
         <TextBlock x:Name="lblDetails" HorizontalAlignment="Left" Height="19" Margin="847,293,0,0" FontFamily="Georgia" TextWrapping="Wrap" Text="Details" VerticalAlignment="Top" Width="145" TextAlignment="Center" FontSize="14"/>
         <Border >
             <Grid>
-                <esri:MapView x:Name="MyMapView" HorizontalAlignment="Stretch" RenderTransformOrigin="0.265,0.553" Margin="38,236,503,99">
+                <esri:MapView x:Name="MyMapView" HorizontalAlignment="Stretch" RenderTransformOrigin="0.265,0.553" Margin="38,236,503,99" >
+                    <esri:MapView.Overlays>
+                        <esri:OverlayItemsControl>
+                            <Grid x:Name="popup" 
+                          esri:MapView.ViewOverlayAnchor="{Binding Geometry}" 
+                          IsHitTestVisible="False" HorizontalAlignment="Right" VerticalAlignment="Top" MaxWidth="200">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="20" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Border Background="#CC000000" BorderThickness="1,1,1,0" Margin="0,0,0,-1" BorderBrush="White" Grid.ColumnSpan="2">
+                                    <StackPanel Margin="20">
+                                        <TextBlock FontWeight="Bold" Foreground="White">
+                                    <Run Text="ObjectId = "></Run>
+                                    <Run Text="{Binding Attributes[objectid]}"></Run>
+                                        </TextBlock>
+                                    </StackPanel>
+                                </Border>
+                                <Path StrokeThickness="1" Fill="#CC000000" Stroke="White" Stretch="Fill" HorizontalAlignment="Left" Data="M0,0 L0,1 1,0" Grid.Row="1" />
+                                <Path StrokeThickness="1" Fill="#CC000000" Stroke="White" Stretch="Fill" VerticalAlignment="Top" Data="M0,0 L1,0" Grid.Row="1" Grid.Column="1" />
+                            </Grid>
+                        </esri:OverlayItemsControl>
+
+
+                    </esri:MapView.Overlays>
+                    
                     <esri:MapView.InteractionOptions>
                         <esri:MapViewInteractionOptions IsEnabled="True"/>
                     </esri:MapView.InteractionOptions>

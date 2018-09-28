@@ -27,7 +27,7 @@ using Esri.ArcGISRuntime.UI;
 using Esri.ArcGISRuntime.UI.Controls;
 using System.Drawing;
 using Esri.ArcGISRuntime.Tasks;
-
+using Esri.ArcGISRuntime.Ogc;
 using System.ComponentModel;
 
 
@@ -39,7 +39,11 @@ namespace CemMapApp
         SqlConnection cnn;
         string sql1, sql2;
         string strConn, xId;
+        private FeatureLayer LotLayer;
+        private FeatureLayer PlotLayer;
         public MainWindow()
+
+
         {
             InitializeComponent();
             Initialize();
@@ -314,56 +318,31 @@ namespace CemMapApp
         }
 
 
-
+        
 
             
-
-        private void MyMapView_GeoViewTapped(object sender, GeoViewInputEventArgs e)
-        {
-            // Get the user-tapped location
-            MapPoint mapLocation = e.Location;
-
-            // Project the user-tapped map point location to a geometry
-            Esri.ArcGISRuntime.Geometry.Geometry myGeometry = GeometryEngine.Project(mapLocation, SpatialReferences.Wgs84);
-
-            // Convert to geometry to a traditional Lat/Long map point
-            MapPoint projectedLocation = (MapPoint)myGeometry;
-
-            // Format the display callout string based upon the projected map point (example: "Lat: 100.123, Long: 100.234")
-            string mapLocationDescription = string.Format("Lat: {0:F3} Long:{1:F3}", projectedLocation.Y, projectedLocation.X);
-
-            // Create a new callout definition using the formatted string
-            CalloutDefinition myCalloutDefinition = new CalloutDefinition("Location:", mapLocationDescription);
-
-            // Display the callout
-            MyMapView.ShowCalloutAt(mapLocation, myCalloutDefinition);
-        }
         
 
 
-
-        private void Initialize()
+        
+        
+    
+        public async void Initialize()
         {
             //Map myMap = new Map(Basemap.CreateTerrainWithLabels());
             Map myMap = new Map(BasemapType.ImageryWithLabelsVector, 35.728990, -78.856027, 18);
-            MyMapView.GeoViewTapped += MyMapView_GeoViewTapped;
-        //LegendInfo MapLegend = new LegendInfo {Name, Symbol };
-
-        //var uri = new Uri("C:\\Users\\Jlong\\source\\repos\\CemMapApp\\CemMapApp\\Legend.JPG");
-        //legend.Source = new BitmapImage(uri);
-
-
-        // TEST GDB SERVICE VS MAP SERVICE
-        // http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMTESTSERV/GeoDataServer/versions/dbo.DEFAULT
-        // WFS serv http://apexgis:6080/arcgis/services/C+emeteryHost/CEMTESTSERV/GeoDataServer/WFSServer
+       
+            // TEST GDB SERVICE VS MAP SERVICE
+            // http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMTESTSERV/GeoDataServer/versions/dbo.DEFAULT
+            // WFS serv http://apexgis:6080/arcgis/services/C+emeteryHost/CEMTESTSERV/GeoDataServer/WFSServer
 
 
-        // LEGEND ILayerContent
+            // LEGEND ILayerContent
 
-        //var CemLot = new Uri("http://apexgis.ci.apex.nc.us:6080/arcgis/services/CemeteryHost/CemAppData/GeoDataServer");
-        var CemLot = new Uri("http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMTESTSERV/FeatureServer/0");
+            //var CemLot = new Uri("http://apexgis.ci.apex.nc.us:6080/arcgis/services/CemeteryHost/CemAppData/GeoDataServer");
+            var CemLot = new Uri("http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMTESTSERV/FeatureServer/0");
             FeatureLayer LotLayer = new FeatureLayer(CemLot);
-
+            await LotLayer.LoadAsync();
 
             SimpleLineSymbol LotLineSymb = new SimpleLineSymbol(
                 SimpleLineSymbolStyle.Solid, System.Drawing.Color.Black, 1);
@@ -410,6 +389,8 @@ namespace CemMapApp
             var CemPlot = new Uri("http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMTESTSERV/FeatureServer/1");
             
             FeatureLayer PlotLayer = new FeatureLayer(CemPlot);
+
+            await PlotLayer.LoadAsync();
 
             var CemPlot2 = new Uri("http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMTESTSERV/FeatureServer/1");
 
@@ -515,18 +496,74 @@ namespace CemMapApp
             myMap.MinScale = 2250;
             myMap.MaxScale =30;
 
-
-            //MyMapView.GeoViewTapped += async (s, e) =>
-            //{
-            //  System.Windows.Point tapScreenPoint = e.Position;
-
-            //};
             
+
             MyMapView.Map = myMap;
+            MyMapView.GeoViewTapped += MyMapView_GeoViewTapped;
+          
+        }
+
+
+        private async void MyMapView_GeoViewTapped(object sender, Esri.ArcGISRuntime.UI.Controls.GeoViewInputEventArgs e)
+        {
+
+
+            //var CemLot = new Uri("http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMTESTSERV/FeatureServer/0");
+            // FeatureLayer LotLayer = new FeatureLayer(CemLot);
+
+            //await LotLayer.LoadAsync();
+
+            // NEED TO ACCESS LAYERS AND ADD TO OPERATION MAPPP!!!!!!!!!
+
+
+            // Perform the identify operation
+            MapPoint tapScreenPoint = e.Location;
+
+            var layer = MyMapView.Map.OperationalLayers[1];
+            var pixelTolerance = 10;
+            var returnPopupsOnly = false;
+            var maxResults = 100;
+            MyMapView.DismissCallout();
+            //IdentifyLayerResult myIdentifyResult = await MyMapView.IdentifyLayerAsync(layer, e.Position, pixelTolerance, returnPopupsOnly, maxResults);
+
+            IdentifyLayerResult myIdentifyResult = await MyMapView.IdentifyLayerAsync(layer, e.Position, pixelTolerance, returnPopupsOnly, maxResults);
+
+
+
+            // Return if there's nothing to show
+            if (myIdentifyResult.GeoElements.Count() < 1)
+            {
+                return;
+            }
+
+            FeatureLayer idLayer = myIdentifyResult.LayerContent as FeatureLayer;
+
+            // Retrieve the identified feature, which is always a WmsFeature for WMS layers
+
+            Feature idFeature = (Feature)myIdentifyResult.GeoElements[0];
+            //foreach (GeoElement idElement in myIdentifyResult.GeoElements)
+            // {
+            // cast the result GeoElement to Feature
+            //   Feature idFeature = idElement as Feature;
+
+            try
+            {
+                string content = string.Format("{0}   {1}    {2}    {3}  {4}", idFeature.Attributes["name_FIRST"].ToString(), idFeature.Attributes["name_LAST"].ToString(), idFeature.Attributes["plot"].ToString(), idFeature.Attributes["lot"].ToString(), idFeature.Attributes["PLOT_ID"].ToString());
+
+
+
+                CalloutDefinition myCalloutDefinition = new CalloutDefinition(content);
+
+                MyMapView.ShowCalloutAt(tapScreenPoint, myCalloutDefinition);
+            }
+
+            catch
+            {
+                MessageBox.Show("Not an Identifeable Layer");
+            }
 
         }
 
-        // ... code here to show popup ...
     }
 }
 
