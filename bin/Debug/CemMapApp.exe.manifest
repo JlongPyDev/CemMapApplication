@@ -1,0 +1,2063 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="CemMapApp.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="CemMapApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="CemMapApp.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CemMapApp.exe" size="63392">
+      <assemblyIdentity name="CemMapApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>8XPje0aZ0npLHgi7iSgG5GmYpwLOaZV2gYLiwQhQEsw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Esri.ArcGISRuntime.dll" size="3038560">
+      <assemblyIdentity name="Esri.ArcGISRuntime" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>mDURuF5Mz0q+qE6l2l4zT2XS91sVkY4VdzOm5qcSPLc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Esri.ArcGISRuntime.LocalServices.dll" size="174480">
+      <assemblyIdentity name="Esri.ArcGISRuntime.LocalServices" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>+m3bDN5C5vxNqyAifPn25ccd3qEJfAxmCNAfRJ451tE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ar\Esri.ArcGISRuntime.resources.dll" size="432992">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="ar" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>upyKBJPbCCLXZBjjBeZGvvadf27uuzieC7zvQBWEL0E=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="bs\Esri.ArcGISRuntime.resources.dll" size="108896">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="bs" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>JHX1Ny+aIl3yyByvUWilKFpspgqckyiTsDOli7PPhvw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="cs\Esri.ArcGISRuntime.resources.dll" size="376160">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="cs" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>bkl4YMu02gvE/LOUCunJc+b7phs0b8zNcqQ4vQWz3DM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="da\Esri.ArcGISRuntime.resources.dll" size="322912">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="da" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>6MOa0d6fMZSu/1btD54XWDCdkQ42/C1AXjqiH2hKwPw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="de\Esri.ArcGISRuntime.resources.dll" size="368992">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="de" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>eeHu7CexZt/jgmYrqWkdHNMbYnq+adK/ZvyLfUYwjtY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="el\Esri.ArcGISRuntime.resources.dll" size="494944">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="el" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>EkX+3X6wC5LbK5GEgeZ/vv31FDL2IYevQ/YNUSELXEs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\Esri.ArcGISRuntime.resources.dll" size="380768">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>QuJ2AKp8F/uPhuGrsRxT2KUMyB/zURdm9a/Ch7/PG7M=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="et\Esri.ArcGISRuntime.resources.dll" size="381792">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="et" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>MPvhw15sXM7Wd4CxGwhp2ivh7WtqoyhHTviD5P3Q5uo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fi\Esri.ArcGISRuntime.resources.dll" size="338784">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="fi" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>cWLIf19/EPblOjZJRk6FneEUQ8Egyc/Fi2PZGra1chw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="fr\Esri.ArcGISRuntime.resources.dll" size="374112">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="fr" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>M6jcOsJLPfvSxfEpzoSvV6KZX5jJxCs81o8EokyN3RU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="he\Esri.ArcGISRuntime.resources.dll" size="406368">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="he" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>QbnRRpYT5jtVbZcE8SRQKogspMMi3NI8Eok+p3KHzIs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hi\Esri.ArcGISRuntime.resources.dll" size="438112">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="hi" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>QvhYf4F7j8cOKcIg9geMo/80e87rjYsN5ofnuvmxizE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="hr\Esri.ArcGISRuntime.resources.dll" size="306528">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="hr" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>TcbEq6psGCWQsJBXxf1RyddiI5+E10LRFogfKdtTJK4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="id\Esri.ArcGISRuntime.resources.dll" size="309600">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="id" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>ILFHRNe2Sdn9x+xN61ptJIJKM0vvKZRhpTHLNRqfDvY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="it\Esri.ArcGISRuntime.resources.dll" size="375648">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="it" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>renZl0ifmRotjLBZScxwmiMTfQIZm81tbA8ztaZHMos=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ja\Esri.ArcGISRuntime.resources.dll" size="386400">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="ja" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>RzUi1tGCY+SG2zwUEJ3LfCVMPt/upfIuRSWDueDSZng=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ko\Esri.ArcGISRuntime.resources.dll" size="385888">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="ko" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>m0Wr/1FCB54cJSwk+mRDzGQXzxyZhy1A9QWzfBTsvs8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="lt\Esri.ArcGISRuntime.resources.dll" size="378208">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="lt" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>siKzR1cy1wlmqYURFV62a3IO+Tm90/W9o/XK1fOQRpQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="lv\Esri.ArcGISRuntime.resources.dll" size="392544">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="lv" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>DVl45M4wctdkO64ZtQFNOInE6JUvlxdMzNNA5K46VsM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="nb-NO\Esri.ArcGISRuntime.resources.dll" size="315232">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="nb-NO" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>6h/lXk8Ii3B2U/TcqoklVozLkrYjbjtm97hynoZQmZA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="nl\Esri.ArcGISRuntime.resources.dll" size="367456">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="nl" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>B8oP2ruuqAAVUwg30/2pfjEBIkuoBW36zoME8IMSKAM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="no\Esri.ArcGISRuntime.resources.dll" size="59744">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="no" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>oEKHX9u6ulvPuY74Ve8xV4GStYjHUQoBohOFI3L26YI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pl\Esri.ArcGISRuntime.resources.dll" size="385376">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="pl" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Ji7nqdb5a+2qSn0cD/3cCvHquE202XzrlspI8kpGxC8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pt-BR\Esri.ArcGISRuntime.resources.dll" size="378208">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="pt-BR" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>DYlHbCxi5g78GgiwUeF9WGZt85X+45iKRwem+WGAV4s=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pt-PT\Esri.ArcGISRuntime.resources.dll" size="382304">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="pt-PT" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>SJGxJDxSihSgug77CjarOuAcISAqCr7adKFdrqF1+E8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ro\Esri.ArcGISRuntime.resources.dll" size="328544">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="ro" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4P+cz/d9mbDVX4dgDFUXAXmyxoAc31lnmvuAfIhWRBs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ru\Esri.ArcGISRuntime.resources.dll" size="477536">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="ru" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>qqRMtamCVQVFKqHIu8M7cRkb6CacghjF3QoxIQgGftQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sr\Esri.ArcGISRuntime.resources.dll" size="312672">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="sr" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>GuVIbsBsopVS5OGCJjU+/5AKJmaN5R5Zast8DR21gkQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="sv\Esri.ArcGISRuntime.resources.dll" size="359776">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="sv" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>xQ1ChqBEKlamg/41lLb2xqNQL+6RRx/8vmLHR9bvPvc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="th\Esri.ArcGISRuntime.resources.dll" size="477024">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="th" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>LYCWG123uzq0s3uN7EAu78ouEybXXxd4yvT/mQYS7Ko=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tr\Esri.ArcGISRuntime.resources.dll" size="373600">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="tr" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>W+mqrxjCAZYa3vDSjpEJ3EYr3m2Jq4xgXfdMj9G6TO4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="vi\Esri.ArcGISRuntime.resources.dll" size="329056">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="vi" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Bd6fBQpuMFyYJmv82Lym02k1qhLQ05BWcitiHqe7iSg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-CN\Esri.ArcGISRuntime.resources.dll" size="349024">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="zh-CN" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>lsSCZaEc41+EHhQ4xcmMsfPpDPau+ZeMX0uG1+PWDww=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-Hans\Esri.ArcGISRuntime.resources.dll" size="57696">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="zh-Hans" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>e13MTMtte1pll4luHTGiVAltCdV+o39vlDI2rxoF4HM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-HK\Esri.ArcGISRuntime.resources.dll" size="57184">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="zh-HK" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>uoaqcOnl1hmtjQNPC2uQBcZWJJ7jZQx7Eop7PlTN1II=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-TW\Esri.ArcGISRuntime.resources.dll" size="301408">
+      <assemblyIdentity name="Esri.ArcGISRuntime.resources" version="100.3.0.0" publicKeyToken="8FC3CC631E44AD86" language="zh-TW" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>n+bgHT6fxd8BA+T0HRC5cgw93FNAgsU2n162KNLOnn0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Esri.ArcGISRuntime.Toolkit.dll" size="138752">
+      <assemblyIdentity name="Esri.ArcGISRuntime.Toolkit" version="10.2.7.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>+runRkWJXbTBmQlXkD9aGc9E12Op+1apEthHQJ6CYsY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ArcGISRuntime100.3\client32\runtimecore.dll" size="51009640">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R1YwRbaVJWS4/gYpnhGGIuq+L4Jqmug46E3oIO+gqyE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\client32\RuntimeCoreNet.dll" size="1104224">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>a4Fkw/Po8488GhmfZIuHJ/k7CAjjF9HKYf1Pkm1PGbU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\atmosphere_accurate_ps.cso" size="1492">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>CM+XsXnkeiQR7Hq3VSDpMwHwwOKKuy0vnxNRhbocNRw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\atmosphere_accurate_vs.cso" size="7368">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lMDivLZraUvqyafEuInXrcszCjR9MgEkie6bCT6ZRjw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\atmosphere_textured_ps.cso" size="712">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>br3jdOQbWAftrNjn7iCfw2pTcnseeZ9efLu86ND0df4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\atmosphere_textured_vs.cso" size="4224">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>PybCp9GjtkfUakKaQcaa8CITlR+GF6uJz5YwVbSiI5I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\frustum_world_draw_ps.cso" size="992">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>c9VejHq8ov1H2CyfB3+nyXrh/dOJpHJX3iavZX5PHdo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\frustum_world_draw_vs.cso" size="2628">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>as1i+VOZ1355Rg+KEvDlPDCH6Z/jdDh8wh9p/KtxieI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\image_renderer_ps.cso" size="1132">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Xo/+y/jNQmwN8jw4Gotimm6q5tosfqL7f2n73mSXFL8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\image_renderer_vs.cso" size="1104">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7JN1eINOfzZyMmmcCld8alewng3+WFm4KKTbDmnXE5k=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\magnifier_ps.cso" size="1664">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mFvxKsMX0+aZVMYU9sk1jficaRnoGpNkmwGNEvw8J4E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\magnifier_vs.cso" size="844">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RJcochq3aO4kdHxDr72aaPj2a9QYcPt+3ufVOxbHYMs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\measure_line_world_draw_ps.cso" size="2440">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4dAB3EIC78UyAFscYlSGVj8UpaK8qKznalpDsFe0cVQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\measure_line_world_draw_vs.cso" size="2424">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wv/uCaQJP4vrdit0vK82hGSYd0VjOK0cdCpmLXPRH4U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\offscreen_buffer_ps.cso" size="1132">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FVGtA3BcuNhJiSyqQuqmjj+7taBNF6N34D37Rw9OVGs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\offscreen_buffer_vs.cso" size="728">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>eRTI977drmQ5lCHXqhRunNs6orCOJU24P8Z33SXcQYA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\point_billboard_depth_ps.cso" size="1172">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lIujxw0NnT3J0QXwAq3Ew4ymB8mgJ+fhsIYyLfeQc+o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\point_billboard_depth_vs.cso" size="2420">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>LjggJ2FZbhVgA1lDn4XSwoDTiJI5ThYGBOtvInxfguQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\point_billboard_draw_ps.cso" size="1104">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>c0aaCgOsKsT+SN1UGgWwvtu06meUh1kZRBXINdrXYT0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\point_billboard_draw_vs.cso" size="4712">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>vrnJy8ylfDg+FibML98uvcVJelh7g0lsayJsF3aiiPg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\polygon_draw_ps.cso" size="1964">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>bGrbxJfXPB8HywNbHEpSMjCE5PNr12gvsncHBJMaLrs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\polygon_draw_vs.cso" size="2820">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Np6PxgftU+fHlqk/qolnl72Dc/Kdu/52Gzc4uGqG8xI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\polygon_outline_overlay_draw_ps.cso" size="3144">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>D/7iApt/oYlv3X+wzex4dnv703FixlEymcEYCDsciMI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\polygon_outline_overlay_draw_vs.cso" size="12716">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>l+2d90NPyFzOSAqVm8Huj1T4kYwlialRbejvkJC4vCg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\polygon_overlay_draw_ps.cso" size="1924">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xJcb0M4vLb1a4Z/VZafX4OIgKFvjNToQsAvEPpt7cTg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\polygon_overlay_draw_vs.cso" size="3896">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>PuwwUgdgOTOeaOs6Csq3q3MdY0alg2PjLtoB2ddTZis=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\polygon_world_depth_ps.cso" size="1840">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>gCvhXbEyZGYRD+UeF3v1FhTW4QJExKpU+ORU1FBwjJI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\polygon_world_depth_vs.cso" size="3292">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>VoqTNrrc2c/+NGpnLqWMM1vRT/Zc143TSK4IWwhVg+Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\polyline_draw_ps.cso" size="3004">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>culLQFKIU41w1NsgNxK5g8mgIuk0opASNSE7ChtRN54=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\polyline_draw_vs.cso" size="12840">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2SBnZgd8ONvPlOwUMSCwUePifu2u23r0UH1DatMkCVw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\polyline_overlay_draw_ps.cso" size="2772">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>CIRPX0jU4CW8JQmhTrLdzH61JrPPhQwIjo0C8JPuC84=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\polyline_world_depth_ps.cso" size="2812">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>fjMPAzTYgCnyLv26w6w3clluT9vzZ/jJ34QD6NbxTdI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\polyline_world_depth_vs.cso" size="11176">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6ZS/lCxLuMbLxn3jd4bz+PbRevYyrKAfQ/zBUJwHc0U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\post_process_quad_draw_vs.cso" size="724">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lnz5eYHslKnZfIMGA5VyaWvX1+JmzJzBHxHTO0CrvL8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\post_process_viewshed_draw_ps.cso" size="5728">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oMw+ZCywMikeVQfRdel6LupO9tkma39Hk0ChfoK0pfY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\screen_image_renderer_ps.cso" size="1132">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>u8GDRB7i56CX6AaWeIrSRX439+f6znAP/IiVDV1AdMQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\screen_image_renderer_vs.cso" size="928">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+1JoAGwTfbn0xdX8rncrWlOp23tg2LFViXAgXx5umE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\screen_overlay_ps.cso" size="816">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6JueO5ZfUuZm78Vcr8oUDH/qAvCDNLIyMMphojQ4Ar8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\screen_overlay_vs.cso" size="3508">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YbWtarCcY1hXA2HmKbdPbVBgu+gFR0Q5c46Ulh82zy4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_area_pick_ps.cso" size="544">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RzsuQKyemAKEOIhgiHyejol4CkenllBgQNfAtCh84oE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_area_pick_vs.cso" size="1112">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>MkNusXDy3K4A3Px5rxbLzCFXziR5NgpuuoUdOx6I7zc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_area_ps.cso" size="860">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>NC8xJNBYv31GDDSuE42/KYzpP+wdKr30ngox795Xk8E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_area_vs.cso" size="1520">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qAzCoqk0AEmxp5IDJWow5jcDb7FV2yFKALR1otM01Dk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_line_halo_ps.cso" size="816">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wuJaaO5S4cgCNWZPeioJwOdWoYD/bU52aeB0odbZzvc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_line_halo_vs.cso" size="1980">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6F53LjanIrC5kkekou2Z42jUbDd0/nrsKhunUlNdWfc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_line_pick_ps.cso" size="916">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>r0SNNAU0PPuk9xSPt+Qqr7nFl/h2XxaoWt3FHjOp3wc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_line_pick_vs.cso" size="1812">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>pib6pULanCQ6CEtebhvM8ce4IvWDDFJqFVma7wD8qbw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_line_ps.cso" size="1004">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>daQvfiq48RyHJvkCB92VAnWLsWnpxpGvItegtYEe61Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_line_vs.cso" size="1904">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ge8M2tZYYZ7TjuRKceHwhYDkAlhktYNZZySyUsZSg/U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_outlined_area_halo_ps.cso" size="824">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>XFoygFijRUgoHgDgeuO33bZ1vApBeJ8Ak94VkSTxr2M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_outlined_area_halo_vs.cso" size="2036">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dFy2xVA7XUgSpqimx9iCAeskEXE/ybatqoikaKHdrTI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_outlined_area_pick_ps.cso" size="1004">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wlQNjicbGeUVBJQj8TRGX0qYJBUQslLsDJ/ZBwae8Jw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_outlined_area_pick_vs.cso" size="1984">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qpC/+mt11+9VWcPN3+DFa7W7hNJ7pzVAZvIdGbNBZ2M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_outlined_area_ps.cso" size="1392">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4wxt1Ve6fUY3QknHnRp8tqoav8sCDqkMhE4qwWcEsM0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_outlined_area_vs.cso" size="2284">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>VcT2Q3zUbaS0Ulmesr2xwC49+8OiiRAI1pZGu+yJuoU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_point_halo_ps.cso" size="816">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wuJaaO5S4cgCNWZPeioJwOdWoYD/bU52aeB0odbZzvc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_point_halo_vs.cso" size="1768">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>nFIyF3NqKF5HS9Nul+N4Bf5p7tWUST1iGA72utevyYo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_point_pick_ps.cso" size="1300">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>X3ce1bj1U8AdanI7GiTvLpSo/qBUbbp4+IpFCgk3qHs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_point_pick_vs.cso" size="1956">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Pj/31+YEmaf+EvK1gLksMQ6iqGtrYzLSm3b2G+HCAHs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_point_ps.cso" size="1220">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2+j6I2nwQWAiU2oIVL2hJPsi2SBq6WNkVRQgM3+FSRg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_point_vs.cso" size="2028">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JUAOlHWhY1KfGJOyt+mYPoE0YiNlKYPygfR2uwPYiB4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_sdf_point_halo_ps.cso" size="816">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wuJaaO5S4cgCNWZPeioJwOdWoYD/bU52aeB0odbZzvc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_sdf_point_halo_vs.cso" size="1768">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>nFIyF3NqKF5HS9Nul+N4Bf5p7tWUST1iGA72utevyYo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_sdf_point_pick_ps.cso" size="1416">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zvUJ5L550hMBQRsOCs5yrNWohTQGiNbvsUnChQmtb08=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_sdf_point_pick_vs.cso" size="2824">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>EWUubso3nGJICUN3/fxOn+lMe0DGQnM5c65V1ezlKwA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_sdf_point_ps.cso" size="1328">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Ws0XEePzDluL+9ozazwJzhAz0KiEOikUTvqCNFDxu5w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\seq_render_sdf_point_vs.cso" size="2728">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4W/LZzHVRRPfsVRdnOt1vZ5e7HqT9RiO3ziWNUjGwW4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\simple_draw_ps.cso" size="920">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>28z0RAfWgvLH/nWe372r+22Gb05JKzfi05tPo4cmRyc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\simple_draw_vs.cso" size="728">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>AZY8Vxss1UowCo+VWI0dAbjIHpxjbr5tZsixEuHoUBs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\simple_grid_ps.cso" size="928">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+H8pMZh60/XUH+55fWpGBML4L+dsiXBrE7fgEH4qBRo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\simple_grid_vs.cso" size="1104">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QhVmKu1GNDsA0HaJIPScIcT8WSCnu/w07PGvXmKhZgo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\skybox_draw_ps.cso" size="708">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ooJAUqlur3KUkHptMk9Uu1ezBRARU9UJZDAFtgwi9SA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\skybox_draw_vs.cso" size="2212">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>a70oJjaR1CiHlrcSSqKujdTQpLsZQAuxk1cp62mPF/Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\star_draw_ps.cso" size="536">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>s18EkcoUYMbRci4/SBqGy27Jgzsn3hc0MzgTtPoPyY0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\star_draw_vs.cso" size="2072">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ZGzmBNIV7e9Gp/Bk6rveaX9KMdY15eqOnzilUkO8xiM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tex_coor_to_tex_coor_ps.cso" size="840">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>BJM0F7vIyWQONXNb1ePgs9UeMXrLfUU6HlQgSkv9Pf4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tex_coor_to_tex_coor_vs.cso" size="848">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Eu+Eq9f8zZ4aIpAxL818wt/dlR49wh699PWtLBz9k5Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tex_quad_b8g8r8a8un_adv_ps.cso" size="1604">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dZWkKrdhZaBktN43qgOX8fBOyNoPXun6yOcScCs2t08=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tex_quad_b8g8r8a8un_custom_filter_ps.cso" size="2320">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ZjOwNRKHiQE/JsuJLvGWnVtODLmV0mtPkHGudI3dYR0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tex_quad_b8g8r8a8un_ps.cso" size="1132">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>u8GDRB7i56CX6AaWeIrSRX439+f6znAP/IiVDV1AdMQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tex_quad_r16s_test_ps.cso" size="1052">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>0uXv7iMrDn3O7OKWyY3Lscf79pdf6Y+SdHznE2OftF8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tex_quad_r16u_test_ps.cso" size="1080">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3gm4MRxhobxl23UY7micX843ylPV4ZE0St+bgSlkfZ4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tex_quad_r32f_test_ps.cso" size="1060">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>w9jCH/+ANXGkPGQFKDzzfEmCxdUN4HkMYq0pLIAGdkw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tex_quad_rxf_ps.cso" size="908">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>nYDxyRoZ+qD2D/vNu2xHyAhcnzY5DNk8XbgP/SBa/60=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tex_quad_rxs_ps.cso" size="908">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3yBBn1XhZUKTc+kIqFhvTvjtL9A3um8LRXXKjkjs8rM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tex_quad_rxu_ps.cso" size="908">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dBNrMCyIZxtYUrNn+6RcCOXUoWmYNw0bgbLkJiCQM2I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tex_quad_vs.cso" size="1292">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>cmCgDohbD5TlPWmZEG3bh9nGP1SnrYugT/xyff5JrRI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\text_draw_ps.cso" size="1052">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xYsi1f5Umg3XWMd20KOyfESOrA7lV3+o3Ak7gK1RP90=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\text_draw_vs.cso" size="2680">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GzDgdzQTfyIw/X4OGEvlc1Kvlu/2OzZKHy+0AbF+QXg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\texture_draw_instanced_ps.cso" size="1052">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>329GSTGsfGdBYEsAWLktbK12EvJcyX/UBBvY6QrK994=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\texture_draw_instanced_vs.cso" size="2560">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>cZ+SiSvsw3VYl/Lwv61qSKFlgfhMJ1h0pjxfxYoX3FA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\texture_draw_ps.cso" size="1224">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>s/pOLQYrCcjSjjq3sX9SgknGe+6PBz3Vrhin1UQssgQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\texture_draw_vs.cso" size="2856">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>q50MGQO9jWElWmurFtS2hP+U1VELB+HwTYd4YvkHz4g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tile_atmosphere_modifiers_phong_world_draw_ps.cso" size="7040">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3XIsWIyPMFzEfGSWjapp6QROJPab7+HTy46R/uQ+CFA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tile_atmosphere_phong_world_draw_ps.cso" size="6408">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>iJ2cT9XaY6PDNsv45YPutpXLymuw2Zn62PeQDZs8xPY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tile_atmosphere_phong_world_draw_vs.cso" size="7444">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TL0kuivao2C2rTu3xIlv9/EM1DSgOK+9M8DiD6FzZgE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tile_atmosphere_phongshadow_world_draw_ps.cso" size="11436">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oU5Th70ZtJrfwiSAJagvirZVkx11IDCSF36EAFwj7s4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tile_atmosphere_phongshadow_world_draw_vs.cso" size="8624">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>cWMkyUf1zAkKmkKCL2xUX9L7eDL9NktJMJXcxHNJkEc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tile_draped_graphics_draw_ps.cso" size="2556">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>NucEPxSViHzIditQoiVETMAHKCVunddrm0LqxUa8Pus=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tile_draped_graphics_draw_vs.cso" size="9124">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zdjt8L+th8vL+/AS0uCHG9hbOITmNRW9tclFCt1w96A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tile_ground_overlay_draw_ps.cso" size="1632">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Ec2knpe10GC/gVYT2FfBBZMGXxAkJybdA/ctcAE+gKI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tile_ground_overlay_draw_vs.cso" size="4468">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1ENNyBZHuI+9wQrRjREWZ685s0EOKxgXJhmIWud7P/U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tile_modifiers_phong_world_draw_ps.cso" size="6684">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>IRlGghgE8U5pxEXuP6qEugxntwOqsnPF7ooeuKVj4sk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tile_phong_world_draw_ps.cso" size="5880">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>XkU1qObNXqB4KorgoIqwllImSXU35TjIh7B6l/lVdjo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tile_phong_world_draw_vs.cso" size="4232">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5vldjvqUWG4fNUVKj5lHaKV7avhjc152eqUZVtl6CQc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tile_phongshadow_world_draw_ps.cso" size="10920">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>WxW3jSkk9XL0VolWjjWB9uQzGhEdmteq+y81TUHnkCY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tile_phongshadow_world_draw_vs.cso" size="5380">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>T1jvYp+Qm3AnDoXY335+HQosqcCtq2wMoPHx0yKRttY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tile_world_depth_ps.cso" size="1840">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ztcC4e+Q6Kyi0POEYznG586RqjCjXW8DLPZY8AmhSfo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\tile_world_depth_vs.cso" size="3296">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4Zb4PA7yEZpziuLQJ53hfGH7rqXZ6XzBQlli55xudlI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_color_phong_world_draw_ps.cso" size="4040">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zdTKVf+DHwU3g7Nezb1/ySKcuJWt4zfDZTjmcXwKtwE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_color_phong_world_draw_vs.cso" size="3440">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tVtd25P530oBJp/njt9RGzzDJVhhLmDMsxKgLawsnbY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_color_phong_world_instance_draw_vs.cso" size="2980">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>OdEfVJd7/9JkNi6FhFBUS5lnaclevCNkjZXNmp9Z+30=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_color_phongshadow_world_draw_ps.cso" size="7540">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wos8BSmHeWvgnSgQWIfhxVHijT2q+4LIJUS81MLNUDY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_color_phongshadow_world_draw_vs.cso" size="4808">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2HpQGQg+Q5vCHo9RLv5UnJYZmWIS3e4YhMy6br3dHJ4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_color_phongshadow_world_instance_draw_vs.cso" size="4616">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Lbgk3MNUN74PMokBw3GGcZ6nXI0yNtBuyPFUbq5R4X4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_outline_draw_ps.cso" size="1008">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>u5lpyZzjukxgIpx4xfUYXvQtyWCH/0KFaNxQHOnJOxc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_outline_draw_vs.cso" size="5144">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>uZbfMiV3yynaQcW7ccgJr1LM4IUNPmdqnWHt98v6PVU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_outline_instance_draw_vs.cso" size="4288">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>kv3TcQCAwd3ZY6xQksjyy6xKhPN/Hm7XgdgSti2QXsA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_texture_phong_world_draw_ps.cso" size="5252">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>DnzBHD6Du6l3CesLkRz2F02d9Cy74yFkpJo3A5p69Ag=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_texture_phong_world_draw_vs.cso" size="3684">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oVOsYZJ2h3KueAVcCEbZy0Zpjq9arr4H0r5g6eWKX8k=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_texture_phong_world_instance_draw_vs.cso" size="3224">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>AH4P9HcxS9xCC5ztHTva5oiocrbUEmwhhcQMZ1shOhU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_texture_phongshadow_world_draw_ps.cso" size="8772">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>J1GhKuA3ktR2jfevyUMji4Qwh50U4LzvQmIeCC430ek=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_texture_phongshadow_world_draw_vs.cso" size="5052">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>pATy0f0j4rZyrKva/BOGdUaYPNGHd9Y7U1ZiMwbdLus=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_texture_phongshadow_world_instance_draw_vs.cso" size="4860">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>9QWyNfjW4JZGp/nZ8aXwOnGR0UCqTkdrqRsZuTzF/FI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_texture_world_depth_ps.cso" size="1996">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>BeMMoP7ubvB4ezcmO9X21NftRb6fUficT8DG+3yaAUM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_texture_world_depth_vs.cso" size="4204">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lmW9QoQn40CRqOhu9/2dkcGnH7DwLFRMrwnxKwggP4o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_texture_world_instance_depth_vs.cso" size="3572">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YjCLlYhkMVwvL6uXLAgJRhOvgcPt/AdfFm+CrjAeTzQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_world_depth_ps.cso" size="1840">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ztcC4e+Q6Kyi0POEYznG586RqjCjXW8DLPZY8AmhSfo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_world_depth_vs.cso" size="4056">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1FeVWQk5fAI0WVyJOWhBItdu2NtA4eB2t4HCvkgNEOw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\trianglemesh_world_instance_depth_vs.cso" size="3424">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JqTwpTNA80f0zHeMhmcA0spvPDI6jDYJSnGlU1olhoM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_background_pattern_fill_ps.cso" size="1236">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>KpLk9KQn/eNJ4hrmD3Uzs4mplxjUOOM/i4fCmwtEFhY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_background_pattern_fill_vs.cso" size="1384">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>C5fhxYL+5K1pir+czSd0Q1weWd2qwrOEVbqDOKYAwXA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_background_solid_fill_ps.cso" size="704">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Q0OHeH6piV/8dLqIfElV4pzaWEU5yuCacq7jl9GUG4Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_background_solid_fill_vs.cso" size="1192">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7OcR7YU/Y/993iNkd64oMfDkN78fd6e+r3H+jki/BLE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_circle_ps.cso" size="1868">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QN0aNuNTSHzho4yDCoa1cIDT7emocnWHkHghom6UCtA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_circle_vs.cso" size="2992">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YBrJ+k3axF+qiEHy9xHTlGalGF6hB5sazpFynDehmIY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_dd_marker_ps.cso" size="768">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>n0CkYWCWSzTOXVUk1RtyWFWclruKTeEG3xO00hCAIFY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_dd_marker_vs.cso" size="4108">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>CFXhP/XulKol0P4GRKM8Q4vZWE3N3R+7uLL94PzjwIo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_dd_outline_ps.cso" size="908">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YRH1k+Oqf1Aka32Bo26rzUu65+gB/F2IeKn7sUrSZMw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_dd_outline_vs.cso" size="1864">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>nBwcj/zYBmK0iiWFhSYbwqxQ4/pYAuac1dH6x4wk/hA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_dd_pattern_fill_ps.cso" size="1264">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>9AQPoOxMq6Gh/q2QwvxZkZY1Eeu1wQ8MdwDCoUSLc+g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_dd_pattern_fill_vs.cso" size="1596">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3nDJMNG9rN0j3M7kLrD/ySkaNJY5NRoZQj0fHsUyJs0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_dd_pattern_line_ps.cso" size="1944">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2cmCg7dK66+bLEymnbRguiFNLiU2OFUS15UJDVk3DrU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_dd_pattern_line_vs.cso" size="3168">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zgsFbHdvMpeNRTAaJ2xoud71vs8AXNpqmRNS/5iti1c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_dd_sdf_ps.cso" size="1436">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lzN+/E5oc0C5I06vWwYFyQlVTHBO5350kGs52gnoKZE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_dd_sdf_vs.cso" size="4564">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>g7/rdNevlL2wqX3SBxoJU8gtbn6JTfO2onXNd5t2+Ns=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_dd_solid_fill_ps.cso" size="544">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>HrwaAzk3A8P1++ocuagWrggalYJcd8Ek9V+s31V8VwM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_dd_solid_fill_vs.cso" size="1344">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>g8EMlzaiZmC00ijCTczFIf8R964R2pXoNAQybx5Klp0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_dd_solid_line_ps.cso" size="1632">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FA/PU2hcJqvSdRZSMowxPAOa6zqzicsmgkIBskq/jiM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_dd_solid_line_vs.cso" size="3324">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xNpeODpTIrauKVrQm8Ngy9FepGx2JX8mpzvaq2vEFWo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_fill_ps.cso" size="544">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>HrwaAzk3A8P1++ocuagWrggalYJcd8Ek9V+s31V8VwM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_fill_vs.cso" size="1280">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JaM7DNr231xuN78csLpXavsS5XQXSibnhFw53NNiKMU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_line_ps.cso" size="1632">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FA/PU2hcJqvSdRZSMowxPAOa6zqzicsmgkIBskq/jiM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_line_vs.cso" size="3136">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>D9MoIVmBK1VU0y/YGUoliZhsyuHJKbB+mmkh620qKeU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_marker_ps.cso" size="768">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>n0CkYWCWSzTOXVUk1RtyWFWclruKTeEG3xO00hCAIFY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_marker_vs.cso" size="3912">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TixE1OKEVofs3YrVtAD7Xs7xTNnJkMrSY/hd+oqYFOM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_outline_ps.cso" size="908">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YRH1k+Oqf1Aka32Bo26rzUu65+gB/F2IeKn7sUrSZMw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_outline_vs.cso" size="1800">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>SZ115PMZofng1rmnFMZ1MO5JkgxWg6GHxxLlpmfrKKM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_pattern_fill_ps.cso" size="1264">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>9AQPoOxMq6Gh/q2QwvxZkZY1Eeu1wQ8MdwDCoUSLc+g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_pattern_fill_vs.cso" size="1532">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ToCDNFyQ9iQRIfHZ/qtSuB2lSzvxZbg+6bIUEaWagfQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_pattern_line_ps.cso" size="1944">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2cmCg7dK66+bLEymnbRguiFNLiU2OFUS15UJDVk3DrU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_pattern_line_vs.cso" size="2976">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>aaBK/K9xXfOE8g9jzTeyshZf/mKvzjjr/dqwPe7kP2s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_render_target_ps.cso" size="916">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wRv5gWTlRnl6GsXB789iSxT5xOF7sssJZ0Ncc34+C88=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_render_target_vs.cso" size="728">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>eRTI977drmQ5lCHXqhRunNs6orCOJU24P8Z33SXcQYA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_sdf_ps.cso" size="1436">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lzN+/E5oc0C5I06vWwYFyQlVTHBO5350kGs52gnoKZE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_sdf_vs.cso" size="4372">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>c+vJGEiG5PtxeNaMvfHG0YK4oTw6RvttOP45z9ZpSGM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_stencil_ps.cso" size="524">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>kJCw/DOUDqmaBmII8iXLH5HSGXXjg3qdlvkPFN+SquE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_stencil_vs.cso" size="1160">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>LbhlgMVa9ViGlhRY+CGfq8jRzbQmOxRbX2eQbvfLynM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_tile_info_ps.cso" size="524">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>kJCw/DOUDqmaBmII8iXLH5HSGXXjg3qdlvkPFN+SquE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ArcGISRuntime100.3\resources\shaders\vector_tiles_tile_info_vs.cso" size="1160">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>LbhlgMVa9ViGlhRY+CGfq8jRzbQmOxRbX2eQbvfLynM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="CemMapApp.exe.config" size="537">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>d3HOJEMdl/4CsundBzTcRZ5GjsF00nPBZxD9b5VOJjQ=</dsig:DigestValue>
+    </hash>
+  </file>
+</asmv1:assembly>

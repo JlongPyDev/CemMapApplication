@@ -134,7 +134,7 @@
                     </esri:MapView.InteractionOptions>
                     <esri:Map x:Name="MyMap"/>
                 </esri:MapView>
-                <Image x:Name ="legend" HorizontalAlignment="Stretch" VerticalAlignment="Top" Source="C:\Users\Jlong\source\repos\CemMapApp\CemMapApp\legendv3.JPG" Margin="38,646,503,0"/>
+                <Image x:Name ="legend" HorizontalAlignment="Stretch" VerticalAlignment="Top" Source="ImageDep\Legendv3.jpg" Margin="38,646,503,0"/>
                 <Border BorderBrush="#006f6f" BorderThickness="2" HorizontalAlignment="Stretch" Height="477" Margin="38,236,503,0" VerticalAlignment="Top"/>
 
             </Grid>

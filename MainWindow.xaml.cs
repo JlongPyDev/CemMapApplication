@@ -29,10 +29,13 @@ using System.Drawing;
 using Esri.ArcGISRuntime.Tasks;
 using Esri.ArcGISRuntime.Ogc;
 using System.ComponentModel;
+using Esri.ArcGISRuntime.Security;
 
 
 namespace CemMapApp
 {
+    
+
     public partial class MainWindow : Window
 
     {
@@ -41,6 +44,8 @@ namespace CemMapApp
         string strConn, xId;
         private FeatureLayer LotLayer;
         private FeatureLayer PlotLayer;
+        
+
         public MainWindow()
 
 
@@ -317,21 +322,16 @@ namespace CemMapApp
 
         }
 
-
-        
-
-            
-        
-
-
-        
-        
-    
+          
         public async void Initialize()
         {
+
+            string licenseKey = "runtimelite,1000,rud3766972362,none,MJJC7XLS1HSB003AD015";
+            Esri.ArcGISRuntime.ArcGISRuntimeEnvironment.SetLicense(licenseKey);
+
             //Map myMap = new Map(Basemap.CreateTerrainWithLabels());
-            Map myMap = new Map(BasemapType.ImageryWithLabelsVector, 35.728990, -78.856027, 18);
-       
+            Map myMap = new Map(BasemapType.LightGrayCanvasVector, 35.728990, -78.856027, 18);
+
             // TEST GDB SERVICE VS MAP SERVICE
             // http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMTESTSERV/GeoDataServer/versions/dbo.DEFAULT
             // WFS serv http://apexgis:6080/arcgis/services/C+emeteryHost/CEMTESTSERV/GeoDataServer/WFSServer
@@ -339,8 +339,8 @@ namespace CemMapApp
 
             // LEGEND ILayerContent
 
-            //var CemLot = new Uri("http://apexgis.ci.apex.nc.us:6080/arcgis/services/CemeteryHost/CemAppData/GeoDataServer");
-            var CemLot = new Uri("http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMTESTSERV/FeatureServer/0");
+            //var CemLot = new Uri("http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMTESTSERV/FeatureServer/0");
+            var CemLot = new Uri("http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMPRODSERV/FeatureServer/0");
             FeatureLayer LotLayer = new FeatureLayer(CemLot);
             await LotLayer.LoadAsync();
 
@@ -385,14 +385,16 @@ namespace CemMapApp
             LotLayer.LabelDefinitions.Add(LotLabelsDef);
             LotLayer.LabelsEnabled = true;
 
-                // CemPlot Properties
-            var CemPlot = new Uri("http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMTESTSERV/FeatureServer/1");
+            // CemPlot Properties
+
+            //var CemPlot = new Uri("http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMTESTSERV/FeatureServer/1");
+            var CemPlot = new Uri("http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMPRODSERV/FeatureServer/1");
             
             FeatureLayer PlotLayer = new FeatureLayer(CemPlot);
 
             await PlotLayer.LoadAsync();
 
-            var CemPlot2 = new Uri("http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMTESTSERV/FeatureServer/1");
+            var CemPlot2 = new Uri("http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMPRODSERV/FeatureServer/1");
 
             FeatureLayer PlotLayer2 = new FeatureLayer(CemPlot);
 
@@ -435,7 +437,7 @@ namespace CemMapApp
 
             var plotOutline = new SimpleLineSymbol(SimpleLineSymbolStyle.Solid, System.Drawing.Color.White, 1);
                      
-            var town_plot = new SimpleFillSymbol(SimpleFillSymbolStyle.Solid, System.Drawing.Color.HotPink, plotOutline);
+            var town_plot = new SimpleFillSymbol(SimpleFillSymbolStyle.Solid, System.Drawing.ColorTranslator.FromHtml("#DB87F2"), plotOutline);
             plotRenderer2.UniqueValues.Add(new UniqueValue("Town Own", "Town Own", town_plot, "APEX"));
             plotRenderer2.UniqueValues.Add(new UniqueValue("Town Own", "Town Own", town_plot, "TOWN OF APEX"));
 
@@ -448,10 +450,10 @@ namespace CemMapApp
 
             plotRenderer.FieldNames.Add("Plot_status");
             
-
-            var validPlot = new SimpleFillSymbol(SimpleFillSymbolStyle.Solid, System.Drawing.Color.GreenYellow, plotOutline);
-            var unvalidPlot = new SimpleFillSymbol(SimpleFillSymbolStyle.Solid, System.Drawing.Color.Yellow, plotOutline);
-            var notsaleable = new SimpleFillSymbol(SimpleFillSymbolStyle.Solid, System.Drawing.Color.Red, plotOutline);
+            
+            var validPlot = new SimpleFillSymbol(SimpleFillSymbolStyle.Solid, System.Drawing.ColorTranslator.FromHtml("#8DC055"), plotOutline);
+            var unvalidPlot = new SimpleFillSymbol(SimpleFillSymbolStyle.Solid, System.Drawing.ColorTranslator.FromHtml("#F9F07F"), plotOutline);
+            var notsaleable = new SimpleFillSymbol(SimpleFillSymbolStyle.Solid, System.Drawing.ColorTranslator.FromHtml("#F5503B"), plotOutline);
                                 
             plotRenderer.UniqueValues.Add(new UniqueValue("Valid Plot","Valid Plot", validPlot, "Deeded"));
             plotRenderer.UniqueValues.Add(new UniqueValue("Unvalid", "Unvalid Plot", unvalidPlot, "Unknown"));
@@ -464,7 +466,9 @@ namespace CemMapApp
 
             // CemBoundary Graphics
 
-            var CemBound = new Uri("http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMTESTSERV/FeatureServer/2");
+            //var CemBound = new Uri("http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMTESTSERV/FeatureServer/2");
+
+            var CemBound = new Uri("http://apexgis:6080/arcgis/rest/services/CemeteryHost/CEMPRODSERV/FeatureServer/2");
             FeatureLayer BoundLayer = new FeatureLayer(CemBound);
 
             SimpleLineSymbol BoundLineSymb = new SimpleLineSymbol(
@@ -522,13 +526,13 @@ namespace CemMapApp
             var layer = MyMapView.Map.OperationalLayers[1];
             var pixelTolerance = 10;
             var returnPopupsOnly = false;
-            var maxResults = 100;
+            var maxResults = 200;
             MyMapView.DismissCallout();
             //IdentifyLayerResult myIdentifyResult = await MyMapView.IdentifyLayerAsync(layer, e.Position, pixelTolerance, returnPopupsOnly, maxResults);
 
             IdentifyLayerResult myIdentifyResult = await MyMapView.IdentifyLayerAsync(layer, e.Position, pixelTolerance, returnPopupsOnly, maxResults);
 
-
+            //IReadOnlyList<IdentifyLayerResult> myIdentifyResult = await MyMapView.IdentifyLayersAsync(e.Position, pixelTolerance, returnPopupsOnly, maxResults);
 
             // Return if there's nothing to show
             if (myIdentifyResult.GeoElements.Count() < 1)
@@ -552,7 +556,7 @@ namespace CemMapApp
 
 
 
-                CalloutDefinition myCalloutDefinition = new CalloutDefinition(content);
+                CalloutDefinition myCalloutDefinition = new CalloutDefinition("Plot Attributes",content);
 
                 MyMapView.ShowCalloutAt(tapScreenPoint, myCalloutDefinition);
             }
